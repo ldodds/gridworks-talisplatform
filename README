@@ -8,6 +8,9 @@ menu item and dialog for uploading data into a Talis Platform store.
 This initial version allows the RDF generated to be posted into any store. There 
 are a number of rough edges including the user interface, interaction and error handling. 
 
+(I've also not sorted out the build system, have been relying on Eclipse to build 
+classes.) 
+
 The main current limitation is dealing with uploads of large data files. Currently 
 uploads to Platform stores of more than 3-4MB need to be chunked into smaller files. 
 However up to that size data should be loaded without problem.
