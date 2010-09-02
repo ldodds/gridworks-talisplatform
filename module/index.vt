@@ -1,0 +1,12 @@
+#*
+ * Access this page at the URL /extensions/sample/
+ *#
+<html>
+  <head>
+    <title>Talis Platform Extension</title>
+  </head>
+  <body>
+    <h1>Talis Platform Extension</h1>
+    
+  </body>
+</html>

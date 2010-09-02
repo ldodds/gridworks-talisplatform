@@ -1,0 +1,47 @@
+This is an extension to the Freebase Gridworks application to provide a 
+"Load into Talis Platform" option.
+
+The extension builds on the RDF schema alignment and export features available 
+in the latest builds of Gridworks, and essentially just provides an additional 
+menu item and dialog for uploading data into a Talis Platform store.
+
+This initial version allows the RDF generated to be posted into any store. There 
+are a number of rough edges including the user interface, interaction and error handling. 
+
+The main current limitation is dealing with uploads of large data files. Currently 
+uploads to Platform stores of more than 3-4MB need to be chunked into smaller files. 
+However up to that size data should be loaded without problem.
+
+To use the extension you'll need to do the following:
+
+Grab a copy of this code, e.g. checking it out to:
+
+ ~/tools/gridworks-talisplatform
+
+Checkout the latest version of Gridworks from SVN, e.g. to:
+
+ ~/tools/gridworks
+ 
+Edit the following file:
+
+ ~/tools/main/webapp/WEB-INF/butterfly.properties
+ 
+To add the following line additional module path. Note you'll probably need to 
+use an explicit path:
+
+butterfly.modules.path = /home/ldodds/tools/gridworks-talisplatform
+
+Then you can run Gridworks as normal:
+
+./gridworks
+
+If the module is successfully loaded then you should see a new menu item:
+
+Schemas -> Load into Talis Platform...
+
+You'll only be able to access the dialog if you've already mapped your data to an 
+RDF schema.
+
+A preview will be shown in the dialog, and you'll be prompted for the URI of your 
+store and your username and password.
+
